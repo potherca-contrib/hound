@@ -1,0 +1,94 @@
+digraph Diagram { 
+///////////////////////////////// Introduction \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/*
+
+*/
+//////////////////////////////// General Styles \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    graph [
+        label = "Job Arguments"
+        labelloc = "t"
+
+        bgcolor = "#FFFCE2"
+        fontname = "Lato"
+        style = "dotted, filled"
+        fillcolor = "#FFFFFF"
+        newrank = true
+    ]
+
+    node [
+        color = "#565656" // Dark Gray
+        fontcolor = "#FFFFFF"
+        labeljust = "l"
+        shape = "box"
+        style = "filled"
+        width = "2"
+    ]
+
+//////////////////////////// Sub Graphs and Clusters \\\\\\\\\\\\\\\\\\\\\\\\\\\
+    subgraph cluster_Invalid {
+        label = "Report Invalid Config Job"
+
+        node [
+            fillcolor = "#825397" // dark purple
+        ]
+
+        invalid_commit [label="commit"]
+        invalid_filename [label="filename"]
+        invalid_pull_request_number [label="pull_request_number"]
+
+        invalid_filename -> invalid_commit -> invalid_pull_request_number [style="invis"]
+    }
+
+    subgraph cluster_Linter {
+        label = "Linter Job"
+        
+        node [
+            fillcolor = "#AE73D1" // light purple #C099DE
+        ]
+
+        commit_sha [label="commit_sha"]
+        config [label="config"]
+        content [label="content"]
+        filename [label="filename"]
+        patch [label="patch"]
+        pull_request_number [label="pull_request_number"]
+
+        commit_sha -> config -> content -> filename -> patch -> pull_request_number  [style="invis"]
+    }
+
+    subgraph cluster_Complete {
+        label = "Completed File Review Job"
+        
+        node [
+            fillcolor = "#9A61B1" // medium purple #A873D1
+        ]
+
+        complete_commit [label="commit"]
+        complete_filename [label="filename"]
+        complete_line [label="line"]
+        complete_message [label="message"]
+        complete_patch [label="patch"]
+        complete_pull_request_number [label="pull_request_number"]
+        complete_violations [label="violations"]
+
+        complete_commit -> complete_filename -> complete_line -> complete_message -> complete_patch -> complete_pull_request_number -> complete_violations  [style="invis"]
+    }
+
+
+#//////////////////////////////// Connections \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+{rank=same commit_sha, complete_commit, invalid_commit}
+commit_sha:e -> complete_commit:w
+commit_sha:w -> invalid_commit:e
+
+{rank=same filename, complete_filename, invalid_filename}
+filename:e -> complete_filename:w
+filename:w -> invalid_filename:e
+
+{rank=same pull_request_number, complete_pull_request_number, invalid_pull_request_number}
+pull_request_number:e -> complete_pull_request_number:w
+pull_request_number:w -> invalid_pull_request_number:e
+
+{rank=same patch:e -> complete_patch:w}
+
+}//Diagram
