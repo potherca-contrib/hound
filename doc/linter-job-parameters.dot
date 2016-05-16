@@ -5,14 +5,14 @@ digraph Diagram {
 */
 //////////////////////////////// General Styles \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     graph [
+        bgcolor = "#FFFCE2"
+        color="#565656"
+        fillcolor = "#FFFFFF"
+        fontname = "Lato"
         label = "Job Arguments"
         labelloc = "t"
-
-        bgcolor = "#FFFCE2"
-        fontname = "Lato"
-        style = "dotted, filled"
-        fillcolor = "#FFFFFF"
         newrank = true
+        style = "filled"
     ]
 
     node [
@@ -36,7 +36,17 @@ digraph Diagram {
         invalid_filename [label="filename"]
         invalid_pull_request_number [label="pull_request_number"]
 
-        invalid_filename -> invalid_commit -> invalid_pull_request_number [style="invis"]
+        {
+            node [
+                style = "dashed"
+                color = "#C099DE"
+                fillcolor = "#FFFFFF"
+                
+            ]
+
+            i2, i3, i5, i6, i7, i9
+        }
+        invalid_commit -> i2 -> i3 -> invalid_filename -> i5 -> i6 -> i7 -> invalid_pull_request_number -> i9 [style="invis"]
     }
 
     subgraph cluster_Linter {
@@ -53,7 +63,17 @@ digraph Diagram {
         patch [label="patch"]
         pull_request_number [label="pull_request_number"]
 
-        commit_sha -> config -> content -> filename -> patch -> pull_request_number  [style="invis"]
+        {
+            node [
+                style = "dashed"
+                color = "#C099DE"
+                fillcolor = "#FFFFFF"
+                
+            ]
+
+            l5, l6 ,l9
+        }
+        commit_sha -> config -> content -> filename -> l5 -> l6 -> patch -> pull_request_number -> l9 [style="invis"]
     }
 
     subgraph cluster_Complete {
@@ -71,7 +91,17 @@ digraph Diagram {
         complete_pull_request_number [label="pull_request_number"]
         complete_violations [label="violations"]
 
-        complete_commit -> complete_filename -> complete_line -> complete_message -> complete_patch -> complete_pull_request_number -> complete_violations  [style="invis"]
+        {
+            node [
+                style = "dashed"
+                color = "#C099DE"
+                fillcolor = "#FFFFFF"
+                
+            ]
+            
+            c2, c3
+        }
+        complete_commit -> c2 -> c3 -> complete_filename -> complete_line -> complete_message -> complete_patch -> complete_pull_request_number -> complete_violations [style="invis"]
     }
 
 
