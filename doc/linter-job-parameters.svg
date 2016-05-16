@@ -11,15 +11,15 @@
 <polygon fill="#fffce2" stroke="none" points="-4,4 -4,-694 580,-694 580,4 -4,4"/>
 <text text-anchor="middle" x="288" y="-674.8" font-family="Lato" font-size="14.00">Job Arguments</text>
 <g id="clust1" class="cluster"><title>cluster_Invalid</title>
-<polygon fill="#ffffff" stroke="black" stroke-dasharray="1,5" points="8,-80 8,-659 194,-659 194,-80 8,-80"/>
+<polygon fill="#ffffff" stroke="#565656" points="8,-8 8,-659 194,-659 194,-8 8,-8"/>
 <text text-anchor="middle" x="101" y="-643.8" font-family="Lato" font-size="14.00">Report Invalid Config Job</text>
 </g>
-<g id="clust2" class="cluster"><title>cluster_Linter</title>
-<polygon fill="#ffffff" stroke="black" stroke-dasharray="1,5" points="202,-80 202,-659 362,-659 362,-80 202,-80"/>
+<g id="clust3" class="cluster"><title>cluster_Linter</title>
+<polygon fill="#ffffff" stroke="#565656" points="202,-8 202,-659 362,-659 362,-8 202,-8"/>
 <text text-anchor="middle" x="282" y="-643.8" font-family="Lato" font-size="14.00">Linter Job</text>
 </g>
-<g id="clust3" class="cluster"><title>cluster_Complete</title>
-<polygon fill="#ffffff" stroke="black" stroke-dasharray="1,5" points="370,-8 370,-659 568,-659 568,-8 370,-8"/>
+<g id="clust5" class="cluster"><title>cluster_Complete</title>
+<polygon fill="#ffffff" stroke="#565656" points="370,-8 370,-659 568,-659 568,-8 370,-8"/>
 <text text-anchor="middle" x="469" y="-643.8" font-family="Lato" font-size="14.00">Completed File Review Job</text>
 </g>
 <!-- invalid_commit -->
@@ -27,117 +27,176 @@
 <polygon fill="#825397" stroke="#565656" points="173,-628 29,-628 29,-592 173,-592 173,-628"/>
 <text text-anchor="middle" x="101" y="-606.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">commit</text>
 </g>
-<!-- invalid_pull_request_number -->
-<g id="node3" class="node"><title>invalid_pull_request_number</title>
-<polygon fill="#825397" stroke="#565656" points="160,-124 16,-124 16,-88 160,-88 160,-124"/>
-<text text-anchor="middle" x="88" y="-102.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">pull_request_number</text>
+<!-- i2 -->
+<g id="node4" class="node"><title>i2</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="173,-556 29,-556 29,-520 173,-520 173,-556"/>
+<text text-anchor="middle" x="101" y="-534.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">i2</text>
 </g>
-<!-- invalid_commit&#45;&gt;invalid_pull_request_number -->
+<!-- invalid_commit&#45;&gt;i2 -->
 <!-- invalid_filename -->
 <g id="node2" class="node"><title>invalid_filename</title>
-<polygon fill="#825397" stroke="#565656" points="186,-412 42,-412 42,-376 186,-376 186,-412"/>
-<text text-anchor="middle" x="114" y="-390.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">filename</text>
+<polygon fill="#825397" stroke="#565656" points="173,-412 29,-412 29,-376 173,-376 173,-412"/>
+<text text-anchor="middle" x="101" y="-390.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">filename</text>
 </g>
-<!-- invalid_filename&#45;&gt;invalid_commit -->
+<!-- i5 -->
+<g id="node6" class="node"><title>i5</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="173,-340 29,-340 29,-304 173,-304 173,-340"/>
+<text text-anchor="middle" x="101" y="-318.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">i5</text>
+</g>
+<!-- invalid_filename&#45;&gt;i5 -->
+<!-- invalid_pull_request_number -->
+<g id="node3" class="node"><title>invalid_pull_request_number</title>
+<polygon fill="#825397" stroke="#565656" points="173,-124 29,-124 29,-88 173,-88 173,-124"/>
+<text text-anchor="middle" x="101" y="-102.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">pull_request_number</text>
+</g>
+<!-- i9 -->
+<g id="node9" class="node"><title>i9</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="173,-52 29,-52 29,-16 173,-16 173,-52"/>
+<text text-anchor="middle" x="101" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">i9</text>
+</g>
+<!-- invalid_pull_request_number&#45;&gt;i9 -->
+<!-- i3 -->
+<g id="node5" class="node"><title>i3</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="173,-484 29,-484 29,-448 173,-448 173,-484"/>
+<text text-anchor="middle" x="101" y="-462.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">i3</text>
+</g>
+<!-- i2&#45;&gt;i3 -->
+<!-- i3&#45;&gt;invalid_filename -->
+<!-- i6 -->
+<g id="node7" class="node"><title>i6</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="173,-268 29,-268 29,-232 173,-232 173,-268"/>
+<text text-anchor="middle" x="101" y="-246.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">i6</text>
+</g>
+<!-- i5&#45;&gt;i6 -->
+<!-- i7 -->
+<g id="node8" class="node"><title>i7</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="173,-196 29,-196 29,-160 173,-160 173,-196"/>
+<text text-anchor="middle" x="101" y="-174.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">i7</text>
+</g>
+<!-- i6&#45;&gt;i7 -->
+<!-- i7&#45;&gt;invalid_pull_request_number -->
 <!-- commit_sha -->
-<g id="node4" class="node"><title>commit_sha</title>
+<g id="node10" class="node"><title>commit_sha</title>
 <polygon fill="#ae73d1" stroke="#565656" points="354,-628 210,-628 210,-592 354,-592 354,-628"/>
 <text text-anchor="middle" x="282" y="-606.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">commit_sha</text>
 </g>
 <!-- commit_sha&#45;&gt;invalid_commit -->
-<g id="edge15" class="edge"><title>commit_sha:w&#45;&gt;invalid_commit:e</title>
+<g id="edge26" class="edge"><title>commit_sha:w&#45;&gt;invalid_commit:e</title>
 <path fill="none" stroke="black" d="M210,-610C197.538,-610 192.159,-610 183.128,-610"/>
 <polygon fill="black" stroke="black" points="183,-606.5 173,-610 183,-613.5 183,-606.5"/>
 </g>
 <!-- config -->
-<g id="node5" class="node"><title>config</title>
+<g id="node11" class="node"><title>config</title>
 <polygon fill="#ae73d1" stroke="#565656" points="354,-556 210,-556 210,-520 354,-520 354,-556"/>
 <text text-anchor="middle" x="282" y="-534.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">config</text>
 </g>
 <!-- commit_sha&#45;&gt;config -->
 <!-- complete_commit -->
-<g id="node10" class="node"><title>complete_commit</title>
+<g id="node19" class="node"><title>complete_commit</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-628 397,-628 397,-592 541,-592 541,-628"/>
 <text text-anchor="middle" x="469" y="-606.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">commit</text>
 </g>
 <!-- commit_sha&#45;&gt;complete_commit -->
-<g id="edge14" class="edge"><title>commit_sha:e&#45;&gt;complete_commit:w</title>
+<g id="edge25" class="edge"><title>commit_sha:e&#45;&gt;complete_commit:w</title>
 <path fill="none" stroke="black" d="M354,-610C369.229,-610 375.357,-610 386.888,-610"/>
 <polygon fill="black" stroke="black" points="387,-613.5 397,-610 387,-606.5 387,-613.5"/>
 </g>
 <!-- content -->
-<g id="node6" class="node"><title>content</title>
+<g id="node12" class="node"><title>content</title>
 <polygon fill="#ae73d1" stroke="#565656" points="354,-484 210,-484 210,-448 354,-448 354,-484"/>
 <text text-anchor="middle" x="282" y="-462.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">content</text>
 </g>
 <!-- config&#45;&gt;content -->
 <!-- filename -->
-<g id="node7" class="node"><title>filename</title>
+<g id="node13" class="node"><title>filename</title>
 <polygon fill="#ae73d1" stroke="#565656" points="354,-412 210,-412 210,-376 354,-376 354,-412"/>
 <text text-anchor="middle" x="282" y="-390.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">filename</text>
 </g>
 <!-- content&#45;&gt;filename -->
 <!-- filename&#45;&gt;invalid_filename -->
-<g id="edge17" class="edge"><title>filename:w&#45;&gt;invalid_filename:e</title>
-<path fill="none" stroke="black" d="M210,-394C203.667,-394 200.154,-394 196.112,-394"/>
-<polygon fill="black" stroke="black" points="196,-390.5 186,-394 196,-397.5 196,-390.5"/>
+<g id="edge28" class="edge"><title>filename:w&#45;&gt;invalid_filename:e</title>
+<path fill="none" stroke="black" d="M210,-394C197.538,-394 192.159,-394 183.128,-394"/>
+<polygon fill="black" stroke="black" points="183,-390.5 173,-394 183,-397.5 183,-390.5"/>
 </g>
-<!-- patch -->
-<g id="node8" class="node"><title>patch</title>
-<polygon fill="#ae73d1" stroke="#565656" points="354,-196 210,-196 210,-160 354,-160 354,-196"/>
-<text text-anchor="middle" x="282" y="-174.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">patch</text>
+<!-- l5 -->
+<g id="node16" class="node"><title>l5</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="354,-340 210,-340 210,-304 354,-304 354,-340"/>
+<text text-anchor="middle" x="282" y="-318.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">l5</text>
 </g>
-<!-- filename&#45;&gt;patch -->
+<!-- filename&#45;&gt;l5 -->
 <!-- complete_filename -->
-<g id="node11" class="node"><title>complete_filename</title>
+<g id="node20" class="node"><title>complete_filename</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-412 397,-412 397,-376 541,-376 541,-412"/>
 <text text-anchor="middle" x="469" y="-390.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">filename</text>
 </g>
 <!-- filename&#45;&gt;complete_filename -->
-<g id="edge16" class="edge"><title>filename:e&#45;&gt;complete_filename:w</title>
+<g id="edge27" class="edge"><title>filename:e&#45;&gt;complete_filename:w</title>
 <path fill="none" stroke="black" d="M354,-394C369.229,-394 375.357,-394 386.888,-394"/>
 <polygon fill="black" stroke="black" points="387,-397.5 397,-394 387,-390.5 387,-397.5"/>
 </g>
+<!-- patch -->
+<g id="node14" class="node"><title>patch</title>
+<polygon fill="#ae73d1" stroke="#565656" points="354,-196 210,-196 210,-160 354,-160 354,-196"/>
+<text text-anchor="middle" x="282" y="-174.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">patch</text>
+</g>
 <!-- pull_request_number -->
-<g id="node9" class="node"><title>pull_request_number</title>
+<g id="node15" class="node"><title>pull_request_number</title>
 <polygon fill="#ae73d1" stroke="#565656" points="354,-124 210,-124 210,-88 354,-88 354,-124"/>
 <text text-anchor="middle" x="282" y="-102.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">pull_request_number</text>
 </g>
 <!-- patch&#45;&gt;pull_request_number -->
 <!-- complete_patch -->
-<g id="node14" class="node"><title>complete_patch</title>
+<g id="node23" class="node"><title>complete_patch</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-196 397,-196 397,-160 541,-160 541,-196"/>
 <text text-anchor="middle" x="469" y="-174.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">patch</text>
 </g>
 <!-- patch&#45;&gt;complete_patch -->
-<g id="edge20" class="edge"><title>patch:e&#45;&gt;complete_patch:w</title>
+<g id="edge31" class="edge"><title>patch:e&#45;&gt;complete_patch:w</title>
 <path fill="none" stroke="black" d="M354,-178C369.229,-178 375.357,-178 386.888,-178"/>
 <polygon fill="black" stroke="black" points="387,-181.5 397,-178 387,-174.5 387,-181.5"/>
 </g>
 <!-- pull_request_number&#45;&gt;invalid_pull_request_number -->
-<g id="edge19" class="edge"><title>pull_request_number:w&#45;&gt;invalid_pull_request_number:e</title>
-<path fill="none" stroke="black" d="M210,-106C198.903,-106 193.918,-106 186.068,-106"/>
-<polygon fill="black" stroke="black" points="186,-102.5 176,-106 186,-109.5 186,-102.5"/>
+<g id="edge30" class="edge"><title>pull_request_number:w&#45;&gt;invalid_pull_request_number:e</title>
+<path fill="none" stroke="black" d="M210,-106C205.188,-106 202.236,-106 199.227,-106"/>
+<polygon fill="black" stroke="black" points="199,-102.5 189,-106 199,-109.5 199,-102.5"/>
 </g>
+<!-- l9 -->
+<g id="node18" class="node"><title>l9</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="354,-52 210,-52 210,-16 354,-16 354,-52"/>
+<text text-anchor="middle" x="282" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">l9</text>
+</g>
+<!-- pull_request_number&#45;&gt;l9 -->
 <!-- complete_pull_request_number -->
-<g id="node15" class="node"><title>complete_pull_request_number</title>
+<g id="node24" class="node"><title>complete_pull_request_number</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-124 397,-124 397,-88 541,-88 541,-124"/>
 <text text-anchor="middle" x="469" y="-102.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">pull_request_number</text>
 </g>
 <!-- pull_request_number&#45;&gt;complete_pull_request_number -->
-<g id="edge18" class="edge"><title>pull_request_number:e&#45;&gt;complete_pull_request_number:w</title>
+<g id="edge29" class="edge"><title>pull_request_number:e&#45;&gt;complete_pull_request_number:w</title>
 <path fill="none" stroke="black" d="M354,-106C358.306,-106 361.047,-106 363.74,-106"/>
 <polygon fill="black" stroke="black" points="364,-109.5 374,-106 364,-102.5 364,-109.5"/>
 </g>
-<!-- complete_commit&#45;&gt;complete_filename -->
+<!-- l6 -->
+<g id="node17" class="node"><title>l6</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="354,-268 210,-268 210,-232 354,-232 354,-268"/>
+<text text-anchor="middle" x="282" y="-246.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">l6</text>
+</g>
+<!-- l5&#45;&gt;l6 -->
+<!-- l6&#45;&gt;patch -->
+<!-- c2 -->
+<g id="node26" class="node"><title>c2</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="541,-556 397,-556 397,-520 541,-520 541,-556"/>
+<text text-anchor="middle" x="469" y="-534.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">c2</text>
+</g>
+<!-- complete_commit&#45;&gt;c2 -->
 <!-- complete_line -->
-<g id="node12" class="node"><title>complete_line</title>
+<g id="node21" class="node"><title>complete_line</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-340 397,-340 397,-304 541,-304 541,-340"/>
 <text text-anchor="middle" x="469" y="-318.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">line</text>
 </g>
 <!-- complete_filename&#45;&gt;complete_line -->
 <!-- complete_message -->
-<g id="node13" class="node"><title>complete_message</title>
+<g id="node22" class="node"><title>complete_message</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-268 397,-268 397,-232 541,-232 541,-268"/>
 <text text-anchor="middle" x="469" y="-246.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">message</text>
 </g>
@@ -145,10 +204,17 @@
 <!-- complete_message&#45;&gt;complete_patch -->
 <!-- complete_patch&#45;&gt;complete_pull_request_number -->
 <!-- complete_violations -->
-<g id="node16" class="node"><title>complete_violations</title>
+<g id="node25" class="node"><title>complete_violations</title>
 <polygon fill="#9a61b1" stroke="#565656" points="541,-52 397,-52 397,-16 541,-16 541,-52"/>
 <text text-anchor="middle" x="469" y="-30.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">violations</text>
 </g>
 <!-- complete_pull_request_number&#45;&gt;complete_violations -->
+<!-- c3 -->
+<g id="node27" class="node"><title>c3</title>
+<polygon fill="none" stroke="#c099de" stroke-dasharray="5,2" points="541,-484 397,-484 397,-448 541,-448 541,-484"/>
+<text text-anchor="middle" x="469" y="-462.3" font-family="Times,serif" font-size="14.00" fill="#ffffff">c3</text>
+</g>
+<!-- c2&#45;&gt;c3 -->
+<!-- c3&#45;&gt;complete_filename -->
 </g>
 </svg>
